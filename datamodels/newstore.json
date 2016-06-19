@@ -1,0 +1,24 @@
+{
+    "paths": 
+      [
+	  {"path": "/", "entityName": "store"}
+      ],
+    "entities":
+    [
+	{"entity": "store", "fields":
+	 [
+
+	     {"field": "storeid", "fieldFunction": "uberCount(STORE-)"},	     
+	     {"field": "streetadd", "fieldFunction": "address.streetAddress()"},
+	     {"field": "zipcode", "fieldFunction": "address.randomuszipcode()"},
+	     {"field": "noop", "fieldFunction": "session.setKeyValue([storeid,this.storeid])"}
+		     
+		 ]
+	}
+    ],
+        "optional": 
+    [
+	{"event-generation-interval-in-milliseconds": 20}
+    ]
+
+}

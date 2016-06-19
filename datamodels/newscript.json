@@ -1,0 +1,25 @@
+{
+    "paths": 
+      [
+	  {"path": "/", "entityName": "script"}
+      ],
+    "entities":
+    [
+	{"entity": "script", "fields":
+	 [
+
+	     {"field": "scriptid", "fieldFunction": "random.uuid()"},
+	     {"field": "storeid", "fieldFunction": "session.getRandomKeyValue(storeid)"},
+	     {"field": "createdate", "fieldFunction": "time.randomdayinfuture([2016-01-01,365,YYYY-MM-DD])"},
+	     {"field": "noop", "fieldFunction": "session.setKeyValue([scriptid,this.scriptid])"},
+	     {"field": "noop2", "fieldFunction": "session.setKeyValue([this.scriptid,this.storeid])"}
+		     
+	 ]
+	}
+    ],
+        "optional": 
+    [
+	{"event-generation-interval-in-milliseconds": 20}
+    ]
+
+}

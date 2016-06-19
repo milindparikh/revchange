@@ -1,0 +1,14 @@
+CASSANDRA
+
+
+create table store (storeid text, type text, part int, prescription_create_date map<text, date>, streetadd text, zipcode text, PRIMARY KEY (storeid, type, part));
+
+
+
+
+KAFKA
+bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --topic newstore --partitions 1 --replication-factor 1
+bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --topic newscript --partitions 1 --replication-factor 1
+bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --topic changescript --partitions 1 --replication-factor 1
+bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --topic relocatestore --partitions 1 --replication-factor 1
+

@@ -1,0 +1,23 @@
+{
+    "paths": 
+      [
+	  {"path": "/", "entityName": "store"}
+      ],
+    "entities":
+    [
+	{"entity": "store", "fields":
+	 [
+
+	     {"field": "storeid", "fieldFunction": "session.getRandomKeyValue(storeid)"},	     
+	     {"field": "streetadd", "fieldFunction": "address.streetAddress()"},
+	     {"field": "zipcode", "fieldFunction": "address.randomuszipcode()"}
+		     
+		 ]
+	}
+    ],
+        "optional": 
+    [
+	{"event-generation-interval-in-milliseconds": 20}
+    ]
+
+}

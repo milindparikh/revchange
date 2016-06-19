@@ -1,0 +1,25 @@
+{
+    "paths": 
+      [
+	  {"path": "/", "entityName": "changescript"}
+      ],
+    "entities":
+    [
+	{"entity": "changescript", "fields":
+	 [
+
+	     {"field": "scriptid", "fieldFunction": "session.getRandomKeyValue(scriptid)"},
+	     {"field": "storeid", "fieldFunction": "session.getRandomKeyValue(this.scriptid)"},
+	     {"field": "createdate", "fieldFunction": "time.randomdayinfuture([2016-01-01,365,YYYY-MM-DD])"}
+	     
+	     
+		     
+	 ]
+	}
+    ],
+        "optional": 
+    [
+	{"event-generation-interval-in-milliseconds": 2}
+    ]
+
+}
